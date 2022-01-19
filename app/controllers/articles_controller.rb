@@ -5,4 +5,9 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
 
+  def index
+		@articles = Article.all 
+		# here we are going to have all the articles collected in one variable
+  end
+
 end
