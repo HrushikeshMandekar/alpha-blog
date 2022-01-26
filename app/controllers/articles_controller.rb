@@ -7,8 +7,7 @@ class ArticlesController < ApplicationController
   end
 
   def index
-		@articles = Article.all 
-		# here we are going to have all the articles collected in one variable
+		@articles = Article.paginate(page: params[:page], per_page: 5) 
   end
 
   def new
