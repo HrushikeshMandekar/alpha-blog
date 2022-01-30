@@ -1,5 +1,47 @@
-<h1>This is the About Page!</h1>
+<h2 class="text-center mt-4"> ABOUT </h2>
 
-
-<%= link_to 'Articles listing',articles_path %>   |   
-<%= link_to 'Home Page', root_path %>
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col-8 mt-4">
+      <div class="card text-center shadow mb-5 bg-white rounded">
+        <div class="card-header font-italic">
+          <h4>Hrushikesh Mandekar</h4>
+          <%= link_to gravatar_for(@user), user_path(@user) %>         
+        </div>
+        <div class="card-body">
+          <div class="card-text text-left">
+            <div>
+              The Alpha Blog project was built by <strong>Hrushikesh Mandekar</strong>.
+              The technology used to built this project was <strong>Ruby on Rails</strong>.
+            </div>  <p></p>
+            <div><strong>Functioning of the project</strong></div>
+             <div> 
+              First user need to sign up for the project to use it. It's FREE!
+              Otherwise user can only view other users articles and their profile.
+              On sign in user get the access to create a new article as well as to 
+              edit and delete its own artile. Remember user can't edit or delete other user's article!
+              But user can see and view other users articles from Index listing page.
+              Also user can see other users profile on Bloggers page and their respective articles too, in their profile.
+              Users get to edit and update their own profile.
+              Articles are categorised into different categories. 
+              User can assign multiple categories to an article or no category to an article.
+              The categories can only be created by the Admin and no other user can create it.
+              You can see all the categories in Category listing page.
+              Admin have all the functionality to create view or delete any users article, 
+              and also Admin can delete any user's profile, but can't update it.
+             </div> <p></p>
+              <div><strong>Components learned while building this project</strong></div>
+             <div> 
+              <p>- Associations, one-to-many, many-to-many </p>
+              <p>- Front-end implementation and styling </p>
+              <p>- Build the back-end and make it communicate with the front-end using the REST architecture. </p>
+              <p>- Git, Github, local dev and production (Heroku)</p>
+             </div> <p></p>
+             <div>The main purpose of this project was to implement all the knowledge of Ruby on Rails</div>  <p></p>
+           <p>You can see its code here: 
+            <a href= "https://github.com/HrushikeshMandekar/alpha-blog">https://github.com/HrushikeshMandekar/alpha-blog</a></p>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

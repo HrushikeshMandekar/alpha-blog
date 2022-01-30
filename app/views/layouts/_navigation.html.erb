@@ -18,10 +18,20 @@
             <%= link_to "Create new article", new_article_path, class: "dropdown-item" %>
           <% end %>
           <%= link_to "View all Articles", articles_path, class: "dropdown-item" %>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">More info</a>
         </div>
       </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+          Categories
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <% if logged_in? && current_user.admin? %>
+            <%= link_to "Create new categories", new_category_path, class: "dropdown-item" %>
+          <% end %>
+          <%= link_to "View all categories", categories_path, class: "dropdown-item" %>
+      </li>
+
       <% if logged_in? %>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
@@ -44,6 +54,11 @@
           <%= link_to 'Sign_up', signup_path, class: "nav-link"%>
         </li>
       <% end %>
+
+      <li class="nav-item">
+        <%= link_to 'About', about_path, class: "nav-link" %>
+      </li>
+
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
